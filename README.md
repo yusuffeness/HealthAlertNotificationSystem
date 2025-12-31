@@ -61,40 +61,30 @@ Navigate to the directory containing the source files and run:
 javac *.java
 
 
-## Running the Program
+## 🚀 Running the Program
 
 The program is executed from the command line using the following syntax:
 
-
 java HealthAlertNotification [--all] <watcherFile> <healthFile>
+# Arguments
+--all (Optional): If specified, the program prints a confirmation message every time a health incident is inserted into the system.
 
-#Arguments
+<watcherFile>: Path to the input file containing watcher events (add, delete, query).
 
---all (optional):
-Prints a message every time a health incident is inserted into the system.
+<healthFile>: Path to the input file containing health incident records.
 
-<watcherFile>:
-Path to the input file containing watcher events (add, delete, query).
-
-<healthFile>:
-Path to the input file containing health incident records.
-
-##Example Execution
-
-Standard run:
+## Example Execution
+Standard Run:
 
 java HealthAlertNotification watcher_data.txt health_data.txt
+Run with Full Logging Enabled:
 
-
-Run with full logging enabled:
+Bash
 
 java HealthAlertNotification --all watcher_data.txt health_data.txt
+## Limitations
+File Format: Input files must strictly follow the required format (lines starting with timestamps, specific command keywords, etc.).
 
+Sorting: Input events within the files must be sorted chronologically (earliest event first).
 
-##Limitations and Additions
-
--Input files must strictly follow the required format.
-
--Input events must be sorted chronologically.
-
--Distance calculations use a Euclidean approximation.
+Distance Logic: Distance calculations use a Euclidean approximation rather than geodetic distance.
