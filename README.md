@@ -65,13 +65,13 @@ javac *.java
 
 The program is executed from the command line using the following syntax:
 
-java HealthAlertNotification [--all] <watcherFile> <healthFile>
+java HealthAlertNotification [--all] watcherFile healthFile
 ### Arguments
 --all (Optional): If specified, the program prints a confirmation message every time a health incident is inserted into the system.
 
--> <watcherFile>: Path to the input file containing watcher events (add, delete, query).
+-> watcherFile: Path to the input file containing watcher events (add, delete, query).
 
--> <healthFile>: Path to the input file containing health incident records.
+-> healthFile: Path to the input file containing health incident records.
 
 ## Example Execution
 Standard Run:
